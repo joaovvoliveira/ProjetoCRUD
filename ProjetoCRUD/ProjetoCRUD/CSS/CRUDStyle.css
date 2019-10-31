@@ -49,6 +49,7 @@ legend {
     margin-right: -4px;
     display: inline-block;
     width: 50%;
+    height: 45px;
 }
 /* O Comando "width: 50%" faz com que cada componente tenha 50% do tamanho horizontal do formulário */
 

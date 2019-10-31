@@ -1,0 +1,6 @@
+C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\Modelo\bin\Debug\Modelo.dll
+C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\Modelo\obj\Debug\Modelo.dll
+C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\Modelo\obj\Debug\Modelo.pdb
