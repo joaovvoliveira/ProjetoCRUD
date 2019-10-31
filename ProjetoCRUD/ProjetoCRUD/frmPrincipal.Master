@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="frmPrincipal.master.cs" Inherits="ProjetoCRUD.frmPrincipal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="CSS/CRUDStyle.css"/>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header id="Cabecalho">
+            <img src="logoCrud.png" id="logo" /><h2 id="Titulo">Projeto - CRUD</h2>
+        </header>
+        <div id="corpo"><br />
+            <br />
+            <button type="submit" id="btnCliente"><a href="frmCliente.aspx"> Cliente </a></button> 
+            <button type="submit" id="btnLogoff">Logoff</button>
+            <div>
+                <asp:ContentPlaceHolder ID="AreaDeTrabalho" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

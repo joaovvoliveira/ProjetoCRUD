@@ -1,0 +1,118 @@
+﻿body {
+    width: 100%;
+    height: 100%;
+}
+#Cabecalho{
+    width: 100%;
+    height: 90px;
+    border: 2px solid #000000;
+}
+
+#btnCliente, #btnLogoff{
+    margin: -15px 30px 10px 10px;
+
+}
+
+#logo{
+    text-align: center;
+    float:left;
+    width: 80px;
+    height: 80px;
+}
+
+#Titulo{
+    width:90%;
+    text-align: center;
+}
+.Dados > h3, .Dados > span{
+    display: inline-block;
+}
+.Dados > [type="text"], .Dados > [type="email"], .Dados > [type="date"] {
+    margin-top: 5px;
+}
+
+
+fieldset {
+    border: 2px solid #ccc;
+    width: 400px;
+    float: left;
+    margin-right: 20px;
+}
+
+legend {
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Todo comando "display: inline-block" deixa cada componente lado a lado */
+.nome, .nasc {
+    margin-right: -4px;
+    display: inline-block;
+    width: 50%;
+}
+/* O Comando "width: 50%" faz com que cada componente tenha 50% do tamanho horizontal do formulário */
+
+.email, .cpf {
+    margin-right: -4px;
+    display: inline-block;
+    width: 50%;
+}
+
+.Dados > .ddd > [name="txbDDD"] {
+    margin-right: 20px;
+    width: 50px;
+}
+
+.ncasa {
+    width: 60px;
+    margin-left: -5px;
+}
+
+.telefone > input, .cep > asp:TextBox {
+    display: inline-block;
+    margin-right: 15px;
+    width: 100px;
+}
+
+.ddd, .telefone, .cep {
+    display: inline-block;
+}
+
+.rua, .ncasa {
+    display: inline-block;
+    width: 50%;
+}
+
+
+.bairro, .cidade {
+    display: inline-block;
+    width: 50%;
+}
+
+.cidade {
+    margin-left: -5px;
+}
+
+#GridView{
+    float: right;
+    margin-top: 10px;
+}
+
+.btns {
+    margin-right: 15px;
+    width: 80px;
+    height: 30px;
+    margin-top: -15px;
+    box-shadow: 3px 3px 3px #000;
+}
+#btnSalvar {
+    background-color: #088A08;
+}
+
+#btnEditar {
+    background-color: #FFFF00;
+}
+
+#btnExcluir {
+    background-color: #FF0000;
+}
