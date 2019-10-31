@@ -40,9 +40,9 @@
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField DataField="codCliente" HeaderText="Cod. Cliente" />
-            <asp:BoundField HeaderText="Nome" />
-            <asp:BoundField HeaderText="CPF" />
-            <asp:BoundField HeaderText="E-mail" />
+            <asp:BoundField DataField="Nome" HeaderText="Nome" />
+            <asp:BoundField DataField="CPF" HeaderText="CPF" />
+            <asp:BoundField DataField="Telefone" HeaderText="Telefone" />
         </Columns>
         <EditRowStyle BackColor="#7C6F57" />
         <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
@@ -76,7 +76,6 @@
             <asp:Button class="btns" ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
             <asp:Button class="btns" ID="btnEditar" runat="server" Text="Editar" />
             <asp:Button class="btns" ID="btnExcluir" runat="server" Text="Excluir" />
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
             <br>
 	
 		</fieldset>

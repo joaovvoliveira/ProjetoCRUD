@@ -42,9 +42,10 @@ namespace ProjetoCRUD
             
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e)
         {
             gvConsultaClientes.DataSource = Controle.Controle.getInstance().ConsultaCliente();
+            gvConsultaClientes.DataBind();
         }
     }
 }
