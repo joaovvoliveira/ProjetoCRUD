@@ -282,3 +282,7 @@ C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\ProjetoCRUD\bin\Con
 C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\ProjetoCRUD\bin\Modelo.pdb
 C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\ProjetoCRUD\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\ProjetoCRUD\obj\Debug\ProjetoCRUD.csproj.CopyComplete
+C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\ProjetoCRUD\bin\Controle.dll
+C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\ProjetoCRUD\bin\Modelo.dll
+C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\ProjetoCRUD\bin\Controle.pdb
+C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\ProjetoCRUD\bin\Modelo.pdb

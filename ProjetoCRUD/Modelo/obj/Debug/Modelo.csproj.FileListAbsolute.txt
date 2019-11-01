@@ -4,3 +4,9 @@ C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\Modelo\obj\Debug\Mo
 C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\Modelo\obj\Debug\Modelo.dll
 C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\Modelo\obj\Debug\Modelo.pdb
+C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\Modelo\bin\Debug\Modelo.dll
+C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\Modelo\bin\Debug\Modelo.pdb
+C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\Modelo\obj\Debug\Modelo.dll
+C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\Modelo\obj\Debug\Modelo.pdb

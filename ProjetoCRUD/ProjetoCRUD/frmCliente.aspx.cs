@@ -47,5 +47,20 @@ namespace ProjetoCRUD
             gvConsultaClientes.DataSource = Controle.Controle.getInstance().ConsultaCliente();
             gvConsultaClientes.DataBind();
         }
+
+        protected void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void gvConsultaClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

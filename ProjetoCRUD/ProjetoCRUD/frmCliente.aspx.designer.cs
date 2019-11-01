@@ -76,15 +76,6 @@ namespace ProjetoCRUD {
         protected global::System.Web.UI.WebControls.TextBox txbCEP;
         
         /// <summary>
-        /// Controle gvConsultaClientes.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvConsultaClientes;
-        
-        /// <summary>
         /// Controle txbRua.
         /// </summary>
         /// <remarks>
@@ -146,5 +137,14 @@ namespace ProjetoCRUD {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnExcluir;
+        
+        /// <summary>
+        /// Controle gvConsultaClientes.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvConsultaClientes;
     }
 }

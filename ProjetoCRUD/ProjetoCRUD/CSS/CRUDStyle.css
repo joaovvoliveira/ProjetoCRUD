@@ -10,7 +10,6 @@
 
 #btnCliente, #btnLogoff{
     margin: -15px 30px 10px 10px;
-
 }
 
 #logo{
@@ -34,7 +33,7 @@
 
 fieldset {
     border: 2px solid #ccc;
-    width: 490px;
+    width: 400px;
     float: left;
     margin-right: 20px;
 }
@@ -69,21 +68,16 @@ legend {
     margin-left: -5px;
 }
 
-.telefone > input, .cep > asp:TextBox {
-    display: inline-block;
-    margin-right: 15px;
-    width: 100px;
-}
 
-.ddd, .telefone, .cep {
+.telefone, .cep {
     display: inline-block;
+    width: 50%;
 }
 
 .rua, .ncasa {
     display: inline-block;
     width: 50%;
 }
-
 
 .bairro, .cidade {
     display: inline-block;
@@ -94,16 +88,18 @@ legend {
     margin-left: -5px;
 }
 
-#GridView{
+#gvConsultaClientes{
     float: right;
     margin-top: 10px;
+    width:50%;
 }
 
 .btns {
     margin-right: 15px;
-    width: 80px;
+    width: 100px;
     height: 30px;
-    margin-top: -15px;
+    margin: 10px 0px;
+    margin-right: 15px;
     box-shadow: 3px 3px 3px #000;
 }
 #btnSalvar {
