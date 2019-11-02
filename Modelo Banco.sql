@@ -36,3 +36,5 @@ select * from Clientes
 inner join Enderecos
 on Enderecos.Fk_Clientes_IdCliente = Clientes.IdCLiente
 select * from Enderecos
+
+select * from Clientes

@@ -23,7 +23,7 @@
 				<div class="cpf">CPF:<br>
 					<asp:TextBox type="text" name="txbCpf"  runat="server" placeholder="000.000.000.00" ID="txbCPF"></asp:TextBox>
 				</div>
-				<br />
+				<br><br />
 				<div class="telefone">Telefone:<br>
 					<asp:TextBox type="text" name="txbTelefone"  runat="server" placeholder="00000.0000" ID="txbTelefone"></asp:TextBox>
 				</div>

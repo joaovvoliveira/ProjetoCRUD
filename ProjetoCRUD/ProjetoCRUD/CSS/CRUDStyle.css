@@ -23,9 +23,6 @@
 .Dados > h3, .Dados > span{
     display: inline-block;
 }
-.Dados > [type="text"], .Dados > [type="email"], .Dados > [type="date"] {
-    margin-top: 5px;
-}
 fieldset {
     border: 2px solid #ccc;
     width: 400px;
@@ -38,41 +35,32 @@ legend {
 }
 /* Todo comando "display: inline-block" deixa cada componente lado a lado */
 .nome, .nasc {
-    margin-right: -4px;
+    margin-right: -14px;
     display: inline-block;
     width: 50%;
-    height: 45px;
 }
 /* O Comando "width: 50%" faz com que cada componente tenha 50% do tamanho horizontal do formulário */
 .email, .cpf {
-    margin-right: -4px;
+    margin-right: -14px;
     display: inline-block;
     width: 50%;
 }
-.Dados > .ddd > [name="txbDDD"] {
-    margin-right: 20px;
-    width: 50px;
-}
-.ncasa {
-    width: 60px;
-    margin-left: -5px;
-}
 .telefone, .cep {
+    margin-right: -14px;
     display: inline-block;
     width: 50%;
 }
 .rua, .ncasa {
+    margin-right: -14px;
     display: inline-block;
     width: 50%;
 }
 .bairro, .cidade {
+    margin-right: -14px;
     display: inline-block;
     width: 50%;
 }
 
-.cidade {
-    margin-left: -5px;
-}
 #gvConsultaClientes{
     float: right;
     margin-top: 10px;
@@ -82,8 +70,7 @@ legend {
     margin-right: 15px;
     width: 100px;
     height: 30px;
-    margin: 10px 0px;
-    margin-right: 15px;
+    margin-top: 10px;
     box-shadow: 3px 3px 3px #000;
 }
 #btnSalvar {
