@@ -52,12 +52,21 @@
             <br>
         </fieldset>
         
-        <asp:GridView ID="gvConsultaClientes" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333">
+        <asp:GridView ID="gvConsultaClientes" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" OnSelectedIndexChanged="gvConsultaClientes_SelectedIndexChanged">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
-                <asp:BoundField HeaderText="Nome" />
-                <asp:BoundField HeaderText="CPF" />
-                <asp:BoundField HeaderText="Telefone" Visible="False" />
+                <asp:BoundField DataField="CodCliente" HeaderText="Cod.Cliente" Visible="False"  DataFormatString="{0:p}" />
+                <asp:BoundField DataField="Nome"  HeaderText="Nome" DataFormatString="{0:p}"  />
+                <asp:BoundField DataField="CPF" HeaderText="CPF" />
+                <asp:BoundField DataField="Telefone" HeaderText="Telefone"/>
+                <asp:BoundField DataField="DataNascimento" HeaderText="" Visible="False" />
+                <asp:BoundField DataField="Email" HeaderText="Email"/>
+                <asp:BoundField DataField="Rua" HeaderText="" Visible="False" />
+                <asp:BoundField DataField="Numero" HeaderText="" Visible="False" />
+                <asp:BoundField DataField="Bairro" HeaderText="" Visible="False" />
+                <asp:BoundField DataField="Cidade" HeaderText="" Visible="False" />
+                <asp:BoundField DataField="Cep" HeaderText="" Visible="False" />
+                <asp:BoundField DataField="Estado" HeaderText="" Visible="False" />
             </Columns>
             <EditRowStyle BackColor="#7C6F57" />
             <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />

@@ -25,27 +25,24 @@ namespace ProjetoCRUD
             cliente.Bairro = txbBairro.Text;
             cliente.Cidade = txbCidade.Text;
             cliente.Cep = txbCEP.Text;
+
             if (txbId.Text.Equals(""))
             {
                 Controle.Controle.getInstance().CadastrarCliente(cliente);
+                Response.Write("<script>alert('cadastrado Com Sucesso');</script>");
             }
             else
             {
                 Controle.Controle.getInstance().EditarCliente(cliente);
+                Response.Write("<script>alert('Alterado com sucesso');</script>");
             }
-            Response.Write("<script>alert('cadastrado Com Sucesso');</script>");
-
+            Page_Load();   
         }
-
-        protected void gvConsultaClientes_PageIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        protected void Page_Load(object sender, EventArgs e)
+        protected void Page_Load()
         {
             gvConsultaClientes.DataSource = Controle.Controle.getInstance().ConsultaCliente();
             gvConsultaClientes.DataBind();
+            
         }
 
         protected void btnEditar_Click(object sender, EventArgs e)
@@ -60,7 +57,20 @@ namespace ProjetoCRUD
 
         protected void gvConsultaClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            C   
+            //txbId.Text = gvConsultaClientes.SelectedRow.Cells[0];
+            TextBox nome = gvConsultaClientes.SelectedRow.FindControl("Nome") as TextBox;
+            txbNome.Text = nome.Text;
+            //txbCPF.Text = gvConsultaClientes.SelectedRow.FindControl("Nome").ToString();
+            txbTelefone.Text = gvConsultaClientes.SelectedRow.Cells[3].ToString();
+            txbDataNascimento.Text = gvConsultaClientes.SelectedRow.Cells[4].ToString();
+            txbEmail.Text = gvConsultaClientes.SelectedRow.Cells[5].ToString();
+            txbRua.Text = gvConsultaClientes.SelectedRow.Cells[6].ToString();
+            txbNumero.Text = gvConsultaClientes.SelectedRow.Cells[7].ToString();
+            txbBairro.Text = gvConsultaClientes.SelectedRow.Cells[8].ToString();
+            txbCidade.Text = gvConsultaClientes.SelectedRow.Cells[9].ToString();
+            txbCEP.Text = gvConsultaClientes.SelectedRow.Cells[10].ToString();
+            //txbEstado.Text = gvConsultaClientes.SelectedRow.Cells[11].ToString();
         }
     }
 }
