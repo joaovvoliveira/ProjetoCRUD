@@ -55,6 +55,7 @@
         <asp:GridView ID="gvConsultaClientes" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" OnSelectedIndexChanged="gvConsultaClientes_SelectedIndexChanged">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
+                <asp:CommandField ShowSelectButton="True" />
                 <asp:BoundField DataField="CodCliente" HeaderText="Cod.Cliente" Visible="False"  DataFormatString="{0:p}" />
                 <asp:BoundField DataField="Nome"  HeaderText="Nome" DataFormatString="{0:p}"  />
                 <asp:BoundField DataField="CPF" HeaderText="CPF" />

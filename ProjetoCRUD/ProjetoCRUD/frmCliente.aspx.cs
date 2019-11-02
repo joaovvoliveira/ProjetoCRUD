@@ -57,11 +57,10 @@ namespace ProjetoCRUD
 
         protected void gvConsultaClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            C   
+             
             //txbId.Text = gvConsultaClientes.SelectedRow.Cells[0];
-            TextBox nome = gvConsultaClientes.SelectedRow.FindControl("Nome") as TextBox;
-            txbNome.Text = nome.Text;
-            //txbCPF.Text = gvConsultaClientes.SelectedRow.FindControl("Nome").ToString();
+            //txbNome.Text = nome.Text;
+            txbCPF.Text = gvConsultaClientes.SelectedRow.Cells[2].ToString();
             txbTelefone.Text = gvConsultaClientes.SelectedRow.Cells[3].ToString();
             txbDataNascimento.Text = gvConsultaClientes.SelectedRow.Cells[4].ToString();
             txbEmail.Text = gvConsultaClientes.SelectedRow.Cells[5].ToString();
