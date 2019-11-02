@@ -12,17 +12,16 @@
     <form id="form1" runat="server">
         <div class="TelaLogin">
 		<header class="headerLogin">
-				<img src="logoCrud.png" id="logoLogin" width="50px" height="50px">	
+				<img src="logoCrud.png" id="logoLogin" width="50px" height="50px" />	
 				<h3 id="tituloLogin"> ProjetoCrud </h3>
 		</header>
 		<div class="corpoLogin">
 			Seja bem vindo !<br>
 			Valide seus dados para entrar<br>
 			Usuário:<br>
-			<input type="text" name="txbUsuario"><br>
+            <asp:TextBox ID="txbUser" name="txbUsuario" runat="server"></asp:TextBox><br />
 			Senha:<br>
-			<input type="password" name="txbSenha"><br>
-            <button type="submit" id="btnLogar"><a href="frmInicial.aspx">Entrar</a></button>
+            <asp:TextBox ID="txbPassword" name="txbSenha" runat="server"></asp:TextBox><br />
             <!--<asp:Button ID="btnLogar" runat="server" Text="Entrar" OnClick="btnLogar_Click" /> -->
             </div>
         </div>

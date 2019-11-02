@@ -57,20 +57,23 @@ namespace ProjetoCRUD
 
         protected void gvConsultaClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            C   
             //txbId.Text = gvConsultaClientes.SelectedRow.Cells[0];
-            TextBox nome = gvConsultaClientes.SelectedRow.FindControl("Nome") as TextBox;
-            txbNome.Text = nome.Text;
-            //txbCPF.Text = gvConsultaClientes.SelectedRow.FindControl("Nome").ToString();
-            txbTelefone.Text = gvConsultaClientes.SelectedRow.Cells[3].ToString();
-            txbDataNascimento.Text = gvConsultaClientes.SelectedRow.Cells[4].ToString();
-            txbEmail.Text = gvConsultaClientes.SelectedRow.Cells[5].ToString();
-            txbRua.Text = gvConsultaClientes.SelectedRow.Cells[6].ToString();
-            txbNumero.Text = gvConsultaClientes.SelectedRow.Cells[7].ToString();
-            txbBairro.Text = gvConsultaClientes.SelectedRow.Cells[8].ToString();
-            txbCidade.Text = gvConsultaClientes.SelectedRow.Cells[9].ToString();
-            txbCEP.Text = gvConsultaClientes.SelectedRow.Cells[10].ToString();
+            txbNome.Text = gvConsultaClientes.SelectedRow.Cells[1].Text;
+            txbCPF.Text = gvConsultaClientes.SelectedRow.Cells[2].Text;
+            txbTelefone.Text = gvConsultaClientes.SelectedRow.Cells[3].Text;
+            txbDataNascimento.Text = gvConsultaClientes.SelectedRow.Cells[4].Text;
+            txbEmail.Text = gvConsultaClientes.SelectedRow.Cells[5].Text;
+            txbRua.Text = gvConsultaClientes.SelectedRow.Cells[6].Text;
+            txbNumero.Text = gvConsultaClientes.SelectedRow.Cells[7].Text;
+            txbBairro.Text = gvConsultaClientes.SelectedRow.Cells[8].Text;
+            txbCidade.Text = gvConsultaClientes.SelectedRow.Cells[9].Text;
+            txbCEP.Text = gvConsultaClientes.SelectedRow.Cells[10].Text;
             //txbEstado.Text = gvConsultaClientes.SelectedRow.Cells[11].ToString();
+        }
+
+        protected void gvConsultaClientes_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+
         }
     }
 }

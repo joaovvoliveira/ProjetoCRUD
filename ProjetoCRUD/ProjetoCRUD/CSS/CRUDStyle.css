@@ -105,6 +105,7 @@ legend {
 }
 #tituloLogin {
     display: inline-block;
+    padding-top: 20px;
 }
 .corpoLogin {
     text-align: center;

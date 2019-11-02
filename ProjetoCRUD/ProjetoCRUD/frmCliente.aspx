@@ -52,7 +52,7 @@
             <br>
         </fieldset>
         
-        <asp:GridView ID="gvConsultaClientes" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" OnSelectedIndexChanged="gvConsultaClientes_SelectedIndexChanged">
+        <asp:GridView ID="gvConsultaClientes" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" OnSelectedIndexChanged="gvConsultaClientes_SelectedIndexChanged" OnRowEditing="gvConsultaClientes_RowEditing">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="CodCliente" HeaderText="Cod.Cliente" Visible="False"  DataFormatString="{0:p}" />
