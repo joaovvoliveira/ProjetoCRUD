@@ -88,7 +88,7 @@ namespace Controle.DAL
                     cliente.CodCliente = Convert.ToInt32(dr["IdCLiente"]);
                     cliente.Nome = Convert.ToString(dr["Nome"]);
                     cliente.Cpf = Convert.ToString(dr["CPF"]);
-                    cliente.DataNascimento = Convert.ToString(dr["DataNascimento"]);
+                    cliente.DataNascimento = Convert.ToDateTime(dr["DataNascimento"]);
                     cliente.Email = Convert.ToString(dr["Email"]);
                     cliente.Telefone = Convert.ToString(dr["Telefone"]);
                     cliente.Rua = Convert.ToString(dr["Rua"]);
@@ -114,8 +114,40 @@ namespace Controle.DAL
 
        public void EditarCliente(ClienteDTO cliente)
       {
+            SqlCommand cmd = new SqlCommand(@"insert into Clientes (Nome, CPF, DataNascimento, Email, Telefone)
+                                            values(@Nome, @CPF, @DataNascimento, @Email, @Telefone)
+                                            declare @Id_Cliente int =@@identity
 
-      }
+                                            update Enderecos
+                                            set Rua = @Rua, Numero = @Numero, Bairro = @Bairro, Cidade = @Cidade, Cep = @Cep
+                                            where Fk_Clientes_IdCliente = 1", conn);
+
+            // cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Nome", cliente.Nome);
+            cmd.Parameters.AddWithValue("@CPF", cliente.Cpf);
+            cmd.Parameters.AddWithValue("@DataNascimento", cliente.DataNascimento);
+            cmd.Parameters.AddWithValue("@Email", cliente.Email);
+            cmd.Parameters.AddWithValue("@Telefone", cliente.Telefone);
+            cmd.Parameters.AddWithValue("@Rua", cliente.Rua);
+            cmd.Parameters.AddWithValue("@Numero", cliente.Numero);
+            cmd.Parameters.AddWithValue("@Bairro", cliente.Bairro);
+            cmd.Parameters.AddWithValue("@Cidade", cliente.Cidade);
+            cmd.Parameters.AddWithValue("@Cep", cliente.Cep);
+            cmd.Parameters.AddWithValue("@IdCliente", Convert.ToInt32(cliente.CodCliente));
+
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                if (conn.State == System.Data.ConnectionState.Open)
+                    conn.Close();
+                throw ex;
+            }
+        }
 
       public void ExcluirCliente(ClienteDTO cliente)
       {

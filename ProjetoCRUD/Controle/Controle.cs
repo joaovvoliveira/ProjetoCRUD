@@ -50,7 +50,7 @@ namespace Controle
 
         public void EditarCliente (ClienteDTO cliente)
         {
-
+            BL.ClienteBL.getInstance().EditarCliente(cliente);
         }
 
         public void ExcluirCliente (ClienteDTO cliente)

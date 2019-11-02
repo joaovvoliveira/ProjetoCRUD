@@ -11,7 +11,7 @@ namespace Modelo.DTO
         private int codCliente;
         private String nome;
         private String cpf;
-        private String dataNascimento;
+        private DateTime dataNascimento;
         private String email;
         private String telefone;
         private String rua;
@@ -23,7 +23,7 @@ namespace Modelo.DTO
 
         public int CodCliente { get => codCliente; set => codCliente = value; }
         public string Nome { get => nome; set => nome = value; }
-        public string DataNascimento { get => dataNascimento; set => dataNascimento = value; }
+        public DateTime DataNascimento { get => dataNascimento; set => dataNascimento = value; }
         public string Email { get => email; set => email = value; }
         public string Telefone { get => telefone; set => telefone = value; }
         public string Rua { get => rua; set => rua = value; }
@@ -33,5 +33,6 @@ namespace Modelo.DTO
         public string Cep { get => cep; set => cep = value; }
         public string Estado { get => estado; set => estado = value; }
         public string Cpf { get => cpf; set => cpf = value; }
+        
     }
 }

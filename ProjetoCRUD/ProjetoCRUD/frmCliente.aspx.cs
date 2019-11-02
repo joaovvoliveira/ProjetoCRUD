@@ -17,7 +17,7 @@ namespace ProjetoCRUD
 
             cliente.Nome = txbNome.Text;
             cliente.Cpf = txbCPF.Text;
-            cliente.DataNascimento = txbDataNascimento.Text;
+            cliente.DataNascimento = Convert.ToDateTime(txbDataNascimento.Text);
             cliente.Email = txbEmail.Text;
             cliente.Telefone = txbTelefone.Text;
             cliente.Rua = txbRua.Text;
@@ -47,6 +47,19 @@ namespace ProjetoCRUD
 
         protected void btnEditar_Click(object sender, EventArgs e)
         {
+            
+            txbId.Text = gvConsultaClientes.SelectedRow.Cells[1].Text;
+            txbNome.Text = gvConsultaClientes.SelectedRow.Cells[2].Text;
+            txbCPF.Text = gvConsultaClientes.SelectedRow.Cells[3].Text;
+            txbTelefone.Text = gvConsultaClientes.SelectedRow.Cells[4].Text;
+            txbDataNascimento.Text = gvConsultaClientes.SelectedRow.Cells[5].Text;
+            txbEmail.Text = gvConsultaClientes.SelectedRow.Cells[6].Text;
+            txbRua.Text = gvConsultaClientes.SelectedRow.Cells[7].Text;
+            txbNumero.Text = gvConsultaClientes.SelectedRow.Cells[8].Text;
+            txbBairro.Text = gvConsultaClientes.SelectedRow.Cells[9].Text;
+            txbCidade.Text = gvConsultaClientes.SelectedRow.Cells[10].Text;
+            txbCEP.Text = gvConsultaClientes.SelectedRow.Cells[11].Text;
+            //txbEstado.Text = gvConsultaClientes.SelectedRow.Cells[11].ToString();
 
         }
 
@@ -55,21 +68,9 @@ namespace ProjetoCRUD
 
         }
 
-        protected void gvConsultaClientes_SelectedIndexChanged(object sender, EventArgs e)
+        protected void gvConsultaClientes_SelectedIndexChanged(object sender, EventArgs  e)
         {
-             
-            //txbId.Text = gvConsultaClientes.SelectedRow.Cells[0];
-            //txbNome.Text = nome.Text;
-            txbCPF.Text = gvConsultaClientes.SelectedRow.Cells[2].ToString();
-            txbTelefone.Text = gvConsultaClientes.SelectedRow.Cells[3].ToString();
-            txbDataNascimento.Text = gvConsultaClientes.SelectedRow.Cells[4].ToString();
-            txbEmail.Text = gvConsultaClientes.SelectedRow.Cells[5].ToString();
-            txbRua.Text = gvConsultaClientes.SelectedRow.Cells[6].ToString();
-            txbNumero.Text = gvConsultaClientes.SelectedRow.Cells[7].ToString();
-            txbBairro.Text = gvConsultaClientes.SelectedRow.Cells[8].ToString();
-            txbCidade.Text = gvConsultaClientes.SelectedRow.Cells[9].ToString();
-            txbCEP.Text = gvConsultaClientes.SelectedRow.Cells[10].ToString();
-            //txbEstado.Text = gvConsultaClientes.SelectedRow.Cells[11].ToString();
+            
         }
     }
 }

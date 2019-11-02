@@ -49,7 +49,7 @@ namespace Controle.BL
 
         public void EditarCliente(ClienteDTO cliente)
         {
-
+            DAL.ClienteDAO.getInstance().EditarCliente(cliente);
         }
 
         public void ExcluirCliente(ClienteDTO cliente)
