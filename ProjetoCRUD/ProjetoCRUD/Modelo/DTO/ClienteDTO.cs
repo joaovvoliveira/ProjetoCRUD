@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Modelo.DTO
 {
     public class ClienteDTO
@@ -33,6 +34,7 @@ namespace Modelo.DTO
         public string Cep { get => cep; set => cep = value; }
         public string Estado { get => estado; set => estado = value; }
         public string Cpf { get => cpf; set => cpf = value; }
+        
         
     }
 }

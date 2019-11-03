@@ -286,3 +286,7 @@ C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\ProjetoCRUD\bin\Co
 C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\ProjetoCRUD\bin\Modelo.dll
 C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\ProjetoCRUD\bin\Controle.pdb
 C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\ProjetoCRUD\bin\Modelo.pdb
+C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\ProjetoCRUD\ProjetoCRUD\obj\Debug\ProjetoCRUD.csprojAssemblyReference.cache
+C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\ProjetoCRUD\ProjetoCRUD\obj\Debug\ProjetoCRUD.csproj.CoreCompileInputs.cache
+C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\ProjetoCRUD\ProjetoCRUD\obj\Debug\ProjetoCRUD.dll
+C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\ProjetoCRUD\ProjetoCRUD\obj\Debug\ProjetoCRUD.pdb

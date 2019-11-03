@@ -5,23 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 using Modelo.DTO;
 
-namespace Controle
+namespace Controles
 {
-    public class Controle
+    public class Controles
     {
         //Inicio Instancia
-        private static Controle instance = null;
+        private static Controles instance = null;
 
-        private Controle()
+        private Controles()
         {
 
         }
 
-        public static Controle getInstance ()
+        public static Controles getInstance ()
         {
             if (instance == null)
             {
-                instance = new Controle();
+                instance = new Controles();
             }
             return instance;
         }

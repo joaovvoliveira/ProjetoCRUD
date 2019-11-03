@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Controle.DAL;
+using Controle;
 
 namespace ProjetoCRUD
 {
@@ -16,7 +18,9 @@ namespace ProjetoCRUD
 
         protected void btnLogar_Click(object sender, EventArgs e)
         {
-            
+            Controle.BL.ClienteBL clienteBL = new Controle.BL.ClienteBL();
+            Controle.Controles controle = new Controle.Controles();
         }
+        
     }
 }
