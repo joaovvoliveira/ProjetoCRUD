@@ -13,10 +13,6 @@ namespace ProjetoCRUD
         {
 
         }
-
-        protected void btnLogar_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
     }
 }

@@ -36,13 +36,13 @@ namespace ProjetoCRUD
                 Controle.Controle.getInstance().EditarCliente(cliente);
                 Response.Write("<script>alert('Alterado com sucesso');</script>");
             }
-            Page_Load();   
+            Page_Load();
         }
         protected void Page_Load()
         {
             gvConsultaClientes.DataSource = Controle.Controle.getInstance().ConsultaCliente();
             gvConsultaClientes.DataBind();
-            
+
         }
 
         protected void btnEditar_Click(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace ProjetoCRUD
 
         protected void gvConsultaClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+
             //txbId.Text = gvConsultaClientes.SelectedRow.Cells[0];
             txbNome.Text = gvConsultaClientes.SelectedRow.Cells[1].Text;
             txbCPF.Text = gvConsultaClientes.SelectedRow.Cells[2].Text;
@@ -69,7 +69,8 @@ namespace ProjetoCRUD
             txbBairro.Text = gvConsultaClientes.SelectedRow.Cells[8].Text;
             txbCidade.Text = gvConsultaClientes.SelectedRow.Cells[9].Text;
             txbCEP.Text = gvConsultaClientes.SelectedRow.Cells[10].Text;
-=======
+
+            /*
              
             //txbId.Text = gvConsultaClientes.SelectedRow.Cells[0];
             //txbNome.Text = nome.Text;
@@ -82,13 +83,10 @@ namespace ProjetoCRUD
             txbBairro.Text = gvConsultaClientes.SelectedRow.Cells[8].ToString();
             txbCidade.Text = gvConsultaClientes.SelectedRow.Cells[9].ToString();
             txbCEP.Text = gvConsultaClientes.SelectedRow.Cells[10].ToString();
->>>>>>> b1e7fcc6e485e9f3b15ebecfe421ab4b32dbcf1b
             //txbEstado.Text = gvConsultaClientes.SelectedRow.Cells[11].ToString();
-        }
+        
 
-        protected void gvConsultaClientes_RowEditing(object sender, GridViewEditEventArgs e)
-        {
-
+            */
         }
     }
 }
