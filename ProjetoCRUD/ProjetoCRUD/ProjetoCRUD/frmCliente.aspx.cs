@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using Controle;
 using Modelo.DTO;
 
+
 namespace ProjetoCRUD
 {
     public partial class frmCliente : System.Web.UI.Page
@@ -28,19 +29,21 @@ namespace ProjetoCRUD
 
             if (txbId.Text.Equals(""))
             {
-                Controle.Controle.getInstance().CadastrarCliente(cliente);
+                Controles.Controles.getInstance().CadastrarCliente(cliente);
                 Response.Write("<script>alert('cadastrado Com Sucesso');</script>");
             }
             else
             {
-                Controle.Controle.getInstance().EditarCliente(cliente);
+                cliente.CodCliente = Convert.ToInt32(txbId.Text);
+                Controles.Controles.getInstance().EditarCliente(cliente);
                 Response.Write("<script>alert('Alterado com sucesso');</script>");
             }
+            limparTextBoxes(this);
             Page_Load();   
         }
         protected void Page_Load()
         {
-            gvConsultaClientes.DataSource = Controle.Controle.getInstance().ConsultaCliente();
+            gvConsultaClientes.DataSource = Controles.Controles.getInstance().ConsultaCliente();
             gvConsultaClientes.DataBind();
             
         }
@@ -71,6 +74,23 @@ namespace ProjetoCRUD
         protected void gvConsultaClientes_SelectedIndexChanged(object sender, EventArgs  e)
         {
             
+        }
+
+        private void limparTextBoxes(Control control)
+        {
+            //Faz um laço para todos os controles passados no parâmetro
+            foreach (Control ctrl in control.Controls)
+            {
+                //Se o contorle for um TextBox...
+                if (ctrl is TextBox)
+                {
+                    ((TextBox)ctrl).Text = String.Empty;
+                }
+                else if (ctrl.Controls.Count > 0)
+                {
+                    limparTextBoxes(ctrl);
+                }
+            }
         }
     }
 }

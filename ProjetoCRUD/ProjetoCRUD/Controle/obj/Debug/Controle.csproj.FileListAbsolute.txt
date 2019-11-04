@@ -16,3 +16,12 @@ C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\Controle\obj\Debug
 C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\Controle\obj\Debug\Controle.csproj.CopyComplete
 C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\Controle\obj\Debug\Controle.dll
 C:\Users\jvict\Área de Trabalho\Projetos Irapuan\ProjetoCRUD\Controle\obj\Debug\Controle.pdb
+C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\ProjetoCRUD\Controle\bin\Debug\Controle.dll
+C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\ProjetoCRUD\Controle\bin\Debug\Controle.pdb
+C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\ProjetoCRUD\Controle\bin\Debug\Modelo.dll
+C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\ProjetoCRUD\Controle\bin\Debug\Modelo.pdb
+C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\ProjetoCRUD\Controle\obj\Debug\Controle.csprojAssemblyReference.cache
+C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\ProjetoCRUD\Controle\obj\Debug\Controle.csproj.CoreCompileInputs.cache
+C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\ProjetoCRUD\Controle\obj\Debug\Controle.csproj.CopyComplete
+C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\ProjetoCRUD\Controle\obj\Debug\Controle.dll
+C:\Users\Wellington\Documents\GitHub\ProjetoCRUD\ProjetoCRUD\ProjetoCRUD\Controle\obj\Debug\Controle.pdb

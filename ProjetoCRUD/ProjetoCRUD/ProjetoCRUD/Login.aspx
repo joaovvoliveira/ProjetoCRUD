@@ -19,10 +19,12 @@
 			Seja bem vindo !<br/>
 			Valide seus dados para entrar<br/>
 			Usuário:<br/>
-			<input type="text" name="txbUsuario"/><br/>
+			<asp:TextBox ID="txbUsuairo" runat="server"></asp:TextBox>
+            <br/>
 			Senha:<br/>
-			<input type="password" name="txbSenha"/><br/>
-            <asp:Button ID="btnLogar" runat="server" Text="Entrar" OnClick="btnLogar_Click1" />
+			<asp:TextBox ID="txbSenha" runat="server"></asp:TextBox>
+            <br/>
+            <asp:Button ID="btnLogar" runat="server" Text="Entrar" OnClick="btnLogar_Click" />
             </div>
         </div>
     </form>

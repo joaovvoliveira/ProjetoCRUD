@@ -18,7 +18,7 @@
         <div id="corpo"><br />
             <br />
             <button type="submit" id="btnCliente"><a href="frmCliente.aspx"> Cliente </a></button>
-            <button type="submit" id="btnLogoff">Logoff</button>
+            <button type="submit" id="btnLogoff"><a href="Login.aspx">Logoff</button>
             <div>
                 <asp:ContentPlaceHolder ID="AreaDeTrabalho" runat="server">
                 </asp:ContentPlaceHolder>

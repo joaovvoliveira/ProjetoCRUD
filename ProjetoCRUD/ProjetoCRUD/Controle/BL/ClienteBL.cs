@@ -56,6 +56,11 @@ namespace Controle.BL
         {
 
         }
+
+        public Boolean ValidarLogin(ClienteDTO cliente)
+        {
+            return DAL.ClienteDAO.getInstance().ValidarLogin(cliente);
+        }
         //Fim Metodos
     }
 }

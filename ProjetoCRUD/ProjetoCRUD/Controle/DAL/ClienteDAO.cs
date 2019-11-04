@@ -32,12 +32,13 @@ namespace Controle.DAL
 
         public void CadastrarCliente(ClienteDTO cliente)
         {
-            SqlCommand cmd = new SqlCommand(@"insert into Clientes (Nome, CPF, DataNascimento, Email, Telefone)
-                                            values(@Nome, @CPF, @DataNascimento, @Email, @Telefone)
-                                            declare @Id_Cliente int =@@identity
+            SqlCommand cmd = new SqlCommand(@"insert into Enderecos(Rua, Numero, Bairro, Cidade, Cep)
+                                            values(@Rua, @Numero, @Bairro, @Cidade, @Cep)
+                                            declare @Id_Endereco int =@@identity
 
-                                            insert into Enderecos(Rua, Numero, Bairro, Cidade, Cep, Fk_Clientes_IdCliente)
-                                            values(@Rua, @Numero, @Bairro, @Cidade, @Cep, @Id_Cliente)", conn);
+                                            insert into Pessoas (Nome, CPF, DataNascimento, Email, Telefone, Fk_Enderecos_IdEndereco)
+                                            values(@Nome, @CPF, @DataNascimento, @Email, @Telefone, @Id_Endereco)", conn);
+
            // cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Nome", cliente.Nome);
             cmd.Parameters.AddWithValue("@CPF", cliente.Cpf);
@@ -68,9 +69,9 @@ namespace Controle.DAL
 
       public List<ClienteDTO> ConsultaCliente()
       {
-            String sqlText = (@"select * from Clientes
+            String sqlText = (@"select * from Pessoas
                                 inner join Enderecos
-                                on Enderecos.Fk_Clientes_IdCliente = Clientes.IdCLiente");
+                                on Pessoas.Fk_Enderecos_IdEndereco = Enderecos.IdEndereco");
             SqlCommand cmd = new SqlCommand(sqlText, conn);
             conn.Open();
             List<ClienteDTO> ListaClientes = null;
@@ -85,7 +86,7 @@ namespace Controle.DAL
                 {
                     ClienteDTO cliente = new ClienteDTO();
 
-                    cliente.CodCliente = Convert.ToInt32(dr["IdCLiente"]);
+                    cliente.CodCliente = Convert.ToInt32(dr["IdCliente"]);
                     cliente.Nome = Convert.ToString(dr["Nome"]);
                     cliente.Cpf = Convert.ToString(dr["CPF"]);
                     cliente.DataNascimento = Convert.ToDateTime(dr["DataNascimento"]);
@@ -114,13 +115,14 @@ namespace Controle.DAL
 
        public void EditarCliente(ClienteDTO cliente)
       {
-            SqlCommand cmd = new SqlCommand(@"insert into Clientes (Nome, CPF, DataNascimento, Email, Telefone)
-                                            values(@Nome, @CPF, @DataNascimento, @Email, @Telefone)
-                                            declare @Id_Cliente int =@@identity
+            SqlCommand cmd = new SqlCommand(@"declare @FkEndereco int
+                                            update Pessoas
+                                            Set Nome = @Nome, CPF = @CPF, DataNascimento = @DataNascimento, Email = @Email, Telefone = @Telefone, @FkEndereco = (select Fk_Enderecos_IdEndereco from Pessoas where IdCliente = @IdCliente)
+                                            where IdCliente = @IdCliente
 
                                             update Enderecos
                                             set Rua = @Rua, Numero = @Numero, Bairro = @Bairro, Cidade = @Cidade, Cep = @Cep
-                                            where Fk_Clientes_IdCliente = 1", conn);
+                                            where IdEndereco = @FkEndereco", conn);
 
             // cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Nome", cliente.Nome);
@@ -153,7 +155,42 @@ namespace Controle.DAL
       {
 
       }
-            //Fim Metodos
+
+      public Boolean ValidarLogin(ClienteDTO cliente)
+      {
+            String sqlText = String.Format("Select * from LoginUsuarios Where Usuario = '{0}' and Senha = '{1}'", cliente.Usuario, cliente.Senha);
+
+            SqlCommand cmd = new SqlCommand(sqlText, conn);
+
+            
+
+            try
+            {
+                conn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+
+                if (dr.Read())
+                {
+                    conn.Close();
+                    return true;
+                }
+                else
+                {
+                    conn.Close();
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                if (conn.State == System.Data.ConnectionState.Open)
+                    conn.Close();
+                throw ex;
+            }
+        }
+
+        //Fim Metodos
     }
   
 }

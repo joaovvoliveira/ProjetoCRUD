@@ -20,7 +20,9 @@ namespace Modelo.DTO
         private String bairro;
         private String cidade;
         private String cep;
-        private String estado;
+
+        private String usuario;
+        private String senha;
 
         public int CodCliente { get => codCliente; set => codCliente = value; }
         public string Nome { get => nome; set => nome = value; }
@@ -32,9 +34,8 @@ namespace Modelo.DTO
         public string Bairro { get => bairro; set => bairro = value; }
         public string Cidade { get => cidade; set => cidade = value; }
         public string Cep { get => cep; set => cep = value; }
-        public string Estado { get => estado; set => estado = value; }
         public string Cpf { get => cpf; set => cpf = value; }
-        
-        
+        public string Usuario { get => usuario; set => usuario = value; }
+        public string Senha { get => senha; set => senha = value; }
     }
 }

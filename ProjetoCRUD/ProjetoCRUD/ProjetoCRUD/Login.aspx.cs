@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Controle.DAL;
 using Controle;
+using Modelo.DTO;
 
 namespace ProjetoCRUD
 {
@@ -18,9 +19,21 @@ namespace ProjetoCRUD
 
         protected void btnLogar_Click(object sender, EventArgs e)
         {
-            Controle.BL.ClienteBL clienteBL = new Controle.BL.ClienteBL();
-            Controle.Controles controle = new Controle.Controles();
+            ClienteDTO cliente = new ClienteDTO();
+
+            cliente.Usuario = txbUsuairo.Text;
+            cliente.Senha = txbSenha.Text;
+
+            if (Controle.BL.ClienteBL.getInstance().ValidarLogin(cliente))
+            {
+
+                Response.Redirect("frmInicial.aspx");
+            }
+            else
+            {
+                Response.Write("<script>alert('Usuario ou Senha Incorretos');</script>");
+            }
+                
         }
-        
     }
 }

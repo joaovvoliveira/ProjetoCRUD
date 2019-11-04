@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Modelo.DTO;
+using Controle.BL;
 
 namespace Controles
 {
@@ -33,7 +34,7 @@ namespace Controles
         {
             try
             {
-                BL.ClienteBL.getInstance().CadastrarCliente(cliente);
+                ClienteBL.getInstance().CadastrarCliente(cliente);
             }
             catch (Exception ex )
             {
@@ -45,17 +46,22 @@ namespace Controles
 
         public List<ClienteDTO>ConsultaCliente()
         {
-            return BL.ClienteBL.getInstance().ConsultaCliente();
+            return ClienteBL.getInstance().ConsultaCliente();
         }
 
         public void EditarCliente (ClienteDTO cliente)
         {
-            BL.ClienteBL.getInstance().EditarCliente(cliente);
+            ClienteBL.getInstance().EditarCliente(cliente);
         }
 
         public void ExcluirCliente (ClienteDTO cliente)
         {
 
+        }
+
+        public Boolean ValidarLogin (ClienteDTO cliente)
+        {
+            return ClienteBL.getInstance().ValidarLogin(cliente);
         }
         //Fim Metodos
     }
