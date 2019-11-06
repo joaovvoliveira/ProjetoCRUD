@@ -1,10 +1,13 @@
 ﻿body {
     width: 50%;
-    background-color: #adadad;
+    background-color: #F5FFFA;
 }
 .nome, .nasc {
     width: 30%;
     display: inline-block;
+}
+#btnCliente{
+    margin-right:20px;
 }
 #logo{
     margin-top: 20px;
@@ -14,6 +17,7 @@
     height: 70px;
 }
 .Dados{
+    margin-left: 20px;
     width:600px;
     margin-bottom: 20px;
 }
@@ -45,7 +49,8 @@
 .botoes{
     margin: 20px 0;
 }
-.btns{
+#btnSalvar, #btnEditar, #btnExcluir{
     width: 20%;
-    margin-right: 10px;
+    margin-left: 20px;
+    
 }

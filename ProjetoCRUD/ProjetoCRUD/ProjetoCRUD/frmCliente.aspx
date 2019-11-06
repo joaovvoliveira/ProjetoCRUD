@@ -9,34 +9,34 @@
                 <br />
 				<h3 id="inserirDados">Insira os Dados abaixo:</h3><span>&nbsp ID: 
                 <asp:TextBox ID="txbId" runat="server" Width="44px"></asp:TextBox><br />
-                </span>
+                </span><br />
                 <div class="nome"> Nome:<br>
 					<asp:TextBox type="text" name="txbNome" runat="server" placeholder="Digite seu Nome" autofocus="" ID="txbNome" ></asp:TextBox>
 				</div>
 				<div class="nasc">Data de Nascimento:<br>
 					<asp:TextBox type="date" name="txbNasc" runat="server" placeholder="DD/MM/AAAA" ID="txbDataNascimento"></asp:TextBox>
-				</div>
+				</div><br />
                 <br>
 				<div class="email">Email:<br>
 					<asp:TextBox type="text" name="txbEmail"  runat="server" placeholder="Ex: Unip@Unipx.com.br" ID="txbEmail"></asp:TextBox>
 				</div>
 				<div class="cpf">CPF:<br>
 					<asp:TextBox type="text" name="txbCpf"  runat="server" placeholder="000.000.000.00" ID="txbCPF"></asp:TextBox>
-				</div>
+				</div><br />
 				<br />
 				<div class="telefone">Telefone:<br>
 					<asp:TextBox type="text" name="txbTelefone"  runat="server" placeholder="00000.0000" ID="txbTelefone"></asp:TextBox>
 				</div>
 				<div class="cep">Cep:<br>
 					<asp:TextBox type="text" name="txbCep"  runat="server" placeholder="00000-00" ID="txbCEP"></asp:TextBox>
-				</div>
+				</div><br />
 				<br>
 				<div class="rua">Rua:<br>
 					<asp:TextBox type="text" name="txbRua"  runat="server" placeholder="Digite o nome da rua" ID="txbRua"></asp:TextBox>
 				</div>
 				<div class="ncasa">Nº:<br>
 					<asp:TextBox type="text" name="txbNCasa" runat="server"  placeholder="Número" ID="txbNumero"></asp:TextBox>
-				</div><br>
+				</div><br><br />
 				<div class="bairro">Bairro:<br>
 					<asp:TextBox type="text" name="txbBairro" runat="server"  placeholder="Digite o Bairro" ID="txbBairro"></asp:TextBox>
 				</div>
@@ -48,9 +48,9 @@
     </fieldset>
 			<br>
     <div class="botoes">
-            <asp:Button class="btns" ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
-            <asp:Button class="btns" ID="btnEditar" runat="server" Text="Editar" OnClick="btnEditar_Click" />
-            <asp:Button class="btns" ID="btnExcluir" runat="server" Text="Excluir" OnClick="btnExcluir_Click" />
+            <asp:Button class="btn btn-success" ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
+            <asp:Button class="btn btn-warning" ID="btnEditar" runat="server" Text="Editar" OnClick="btnEditar_Click" />
+            <asp:Button class="btn btn-danger" ID="btnExcluir" runat="server" Text="Excluir" OnClick="btnExcluir_Click" />
             <br>
     </div>    
         <asp:GridView ID="gvConsultaClientes" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" OnSelectedIndexChanged="gvConsultaClientes_SelectedIndexChanged">
