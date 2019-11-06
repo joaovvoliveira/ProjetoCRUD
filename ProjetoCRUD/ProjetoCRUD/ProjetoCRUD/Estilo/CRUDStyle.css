@@ -1,13 +1,10 @@
 ﻿body {
+    font-family: 'Merriweather', serif;
     width: 50%;
-    background-color: #F5FFFA;
-}
-.nome, .nasc {
-    width: 30%;
-    display: inline-block;
+    background-color: #8DD288;
 }
 #btnCliente{
-    margin-right:20px;
+    margin: 10px 20px;
 }
 #logo{
     margin-top: 20px;
@@ -18,8 +15,13 @@
 }
 .Dados{
     margin-left: 20px;
-    width:600px;
+    width:500px;
+    height: 100%;
+    float: left;
     margin-bottom: 20px;
+}
+.gvConsultaClientes {
+    float: right;
 }
 #Titulo{
     margin: 0 auto;
@@ -29,28 +31,28 @@
 }
 #inserirDados, #txbID {
     display: inline-block;
+    width: 120px;
+}
+.nome, .nasc {
+    display: inline-block;
 }
 .email, .cpf {
     display: inline-block;
-    width: 30%;
 }
 .telefone, .cep {
     display: inline-block;
-    width: 30%;
 }
-.rua,.ncasa{
+.rua, .ncasa {
     display: inline-block;
-    width: 30%;
 }
 .bairro, .cidade {
     display: inline-block;
-    width: 30%;
 }
 .botoes{
-    margin: 20px 0;
+    padding-bottom: 20px;
 }
 #btnSalvar, #btnEditar, #btnExcluir{
     width: 20%;
-    margin-left: 20px;
+    margin-left: 30px;
     
 }
