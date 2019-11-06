@@ -51,6 +51,17 @@ namespace ProjetoCRUD
         protected void btnEditar_Click(object sender, EventArgs e)
         {
             
+            
+
+        }
+
+        protected void btnExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void gvConsultaClientes_SelectedIndexChanged(object sender, EventArgs  e)
+        {
             txbId.Text = gvConsultaClientes.SelectedRow.Cells[1].Text;
             txbNome.Text = gvConsultaClientes.SelectedRow.Cells[2].Text;
             txbCPF.Text = gvConsultaClientes.SelectedRow.Cells[3].Text;
@@ -63,17 +74,6 @@ namespace ProjetoCRUD
             txbCidade.Text = gvConsultaClientes.SelectedRow.Cells[10].Text;
             txbCEP.Text = gvConsultaClientes.SelectedRow.Cells[11].Text;
             //txbEstado.Text = gvConsultaClientes.SelectedRow.Cells[11].ToString();
-
-        }
-
-        protected void btnExcluir_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void gvConsultaClientes_SelectedIndexChanged(object sender, EventArgs  e)
-        {
-            
         }
 
         private void limparTextBoxes(Control control)

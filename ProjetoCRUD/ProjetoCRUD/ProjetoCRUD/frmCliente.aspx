@@ -67,7 +67,7 @@
                 <asp:BoundField DataField="Bairro" HeaderText="Bairoo" Visible="true" />
                 <asp:BoundField DataField="Cidade" HeaderText="Cidade" Visible="true" />
                 <asp:BoundField DataField="Cep" HeaderText="Cep" Visible="true" />
-                <asp:BoundField DataField="Estado" HeaderText="Estado" Visible="true" />
+                
             </Columns>
             <EditRowStyle BackColor="#7C6F57" />
             <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
