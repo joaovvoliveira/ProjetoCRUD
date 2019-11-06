@@ -13,5 +13,15 @@ namespace ProjetoCRUD
         {
 
         }
+
+        protected void btnCliente_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("frmCliente.aspx");
+        }
+
+        protected void btnLogoff_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 }

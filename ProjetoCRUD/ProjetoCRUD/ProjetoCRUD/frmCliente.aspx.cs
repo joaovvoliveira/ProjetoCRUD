@@ -81,7 +81,7 @@ namespace ProjetoCRUD
             //Faz um laço para todos os controles passados no parâmetro
             foreach (Control ctrl in control.Controls)
             {
-                //Se o contorle for um TextBox...
+                //Se o controle for um TextBox...
                 if (ctrl is TextBox)
                 {
                     ((TextBox)ctrl).Text = String.Empty;

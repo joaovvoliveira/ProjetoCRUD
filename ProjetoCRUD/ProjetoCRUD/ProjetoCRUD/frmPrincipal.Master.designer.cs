@@ -31,6 +31,24 @@ namespace ProjetoCRUD {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// Controle btnCliente.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCliente;
+        
+        /// <summary>
+        /// Controle btnLogoff.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnLogoff;
+        
+        /// <summary>
         /// Controle AreaDeTrabalho.
         /// </summary>
         /// <remarks>

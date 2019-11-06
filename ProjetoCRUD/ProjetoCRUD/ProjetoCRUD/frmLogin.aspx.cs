@@ -10,18 +10,18 @@ using Modelo.DTO;
 
 namespace ProjetoCRUD
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class Login2 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void btnLogar_Click(object sender, EventArgs e)
+        protected void Unnamed1_Click(object sender, EventArgs e)
         {
             ClienteDTO cliente = new ClienteDTO();
 
-            cliente.Usuario = txbUsuairo.Text;
+            cliente.Usuario = txbUsuario.Text;
             cliente.Senha = txbSenha.Text;
 
             if (Controle.BL.ClienteBL.getInstance().ValidarLogin(cliente))
@@ -33,7 +33,6 @@ namespace ProjetoCRUD
             {
                 Response.Write("<script>alert('Usuario ou Senha Incorretos');</script>");
             }
-                
         }
     }
 }

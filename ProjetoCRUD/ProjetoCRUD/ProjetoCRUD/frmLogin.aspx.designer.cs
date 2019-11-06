@@ -10,7 +10,7 @@
 namespace ProjetoCRUD {
     
     
-    public partial class Login {
+    public partial class Login2 {
         
         /// <summary>
         /// Controle form1.
@@ -22,13 +22,13 @@ namespace ProjetoCRUD {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Controle txbUsuairo.
+        /// Controle txbUsuario.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbUsuairo;
+        protected global::System.Web.UI.WebControls.TextBox txbUsuario;
         
         /// <summary>
         /// Controle txbSenha.
@@ -38,14 +38,5 @@ namespace ProjetoCRUD {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txbSenha;
-        
-        /// <summary>
-        /// Controle btnLogar.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogar;
     }
 }

@@ -1,0 +1,51 @@
+﻿body {
+    width: 50%;
+    background-color: #666666;
+}
+.nome, .nasc {
+    width: 30%;
+    display: inline-block;
+}
+#logo{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    width: 70px;
+    height: 70px;
+}
+.Dados{
+    width:600px;
+    margin-bottom: 20px;
+}
+#Titulo{
+    margin: 0 auto;
+}
+#logo, #Titulo {
+    display: inline-block;
+}
+#inserirDados, #txbID {
+    display: inline-block;
+}
+.email, .cpf {
+    display: inline-block;
+    width: 30%;
+}
+.telefone, .cep {
+    display: inline-block;
+    width: 30%;
+}
+.rua,.ncasa{
+    display: inline-block;
+    width: 30%;
+}
+.bairro, .cidade {
+    display: inline-block;
+    width: 30%;
+}
+.botoes{
+    margin: 20px 0;
+}
+.btns{
+    width: 20%;
+    margin-right: 10px;
+}
