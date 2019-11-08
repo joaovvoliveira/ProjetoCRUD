@@ -18,7 +18,7 @@ namespace ProjetoCRUD
 
             cliente.Nome = txbNome.Text;
             cliente.Cpf = txbCPF.Text;
-            cliente.DataNascimento = Convert.ToDateTime(txbDataNascimento.Text);
+            cliente.DataNascimento = Convert.ToDateTime(txbDataNascimento.Text + " 00:00:00");
             cliente.Email = txbEmail.Text;
             cliente.Telefone = txbTelefone.Text;
             cliente.Rua = txbRua.Text;

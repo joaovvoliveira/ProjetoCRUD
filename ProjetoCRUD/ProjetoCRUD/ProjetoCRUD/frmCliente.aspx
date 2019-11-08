@@ -4,6 +4,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="AreaDeTrabalho" runat="server">
 <!DOCTYPE html>
     <html>
+        <head>
+            <meta charset="utf-8" />
+        </head>
         <body>
             <!-- Criando o formulário -->
             <fieldset>
@@ -13,37 +16,37 @@
                         <asp:TextBox ID="txbId" runat="server" Width="44px"></asp:TextBox><br />
                         </span><br />
                         <div class="nome"> Nome:<br>
-					        <asp:TextBox type="text" name="txbNome" runat="server" placeholder="Digite seu Nome" autofocus="" ID="txbNome" ></asp:TextBox>
+					        <asp:TextBox type="text" name="txbNome" runat="server" required="required" placeholder="Digite seu Nome" autofocus="" ID="txbNome" ></asp:TextBox>
 				        </div>&nbsp
 				        <div class="nasc">Data de Nascimento:<br>
-					        <asp:TextBox type="date" name="txbNasc" runat="server" placeholder="DD/MM/AAAA" ID="txbDataNascimento"></asp:TextBox>
+					        <asp:TextBox type="date" name="txbNasc" runat="server" required="required" placeholder="DD/MM/AAAA" ID="txbDataNascimento"></asp:TextBox>
 				        </div><br />
                         <br>
 				        <div class="email">Email:<br>
-					        <asp:TextBox type="text" name="txbEmail"  runat="server" placeholder="Ex: Unip@Unipx.com.br" ID="txbEmail"></asp:TextBox>
+					        <asp:TextBox type="text" name="txbEmail" runat="server" required="required" placeholder="Ex: Unip@Unipx.com.br" ID="txbEmail"></asp:TextBox>
 				        </div>&nbsp
 				        <div class="cpf">CPF:<br>
-					        <asp:TextBox type="text" name="txbCpf"  runat="server" placeholder="000.000.000.00" ID="txbCPF"></asp:TextBox>
+					        <asp:TextBox type="text" name="txbCpf" runat="server" required="required" placeholder="000.000.000.00" ID="txbCPF"></asp:TextBox>
 				        </div><br />
 				        <br />
 				        <div class="telefone">Telefone:<br>
-					        <asp:TextBox type="text" name="txbTelefone"  runat="server" placeholder="00000.0000" ID="txbTelefone"></asp:TextBox>
+					        <asp:TextBox type="text" name="txbTelefone" runat="server" required="required" placeholder="00000.0000" ID="txbTelefone"></asp:TextBox>
 				        </div>&nbsp
 				        <div class="cep">Cep:<br>
-					        <asp:TextBox type="text" name="txbCep"  runat="server" placeholder="00000-00" ID="txbCEP"></asp:TextBox>
+					        <asp:TextBox type="text" name="txbCep" runat="server" required="required" placeholder="00000-00" ID="txbCEP"></asp:TextBox>
 				        </div><br />
 				        <br>
 				        <div class="rua">Rua:<br>
-					        <asp:TextBox type="text" name="txbRua"  runat="server" placeholder="Digite o nome da rua" ID="txbRua"></asp:TextBox>
+					        <asp:TextBox type="text" name="txbRua" runat="server" required="required" placeholder="Digite o nome da rua" ID="txbRua"></asp:TextBox>
 				        </div>&nbsp
 				        <div class="ncasa">Nº:<br>
-					        <asp:TextBox type="text" name="txbNCasa" runat="server"  placeholder="Número" ID="txbNumero"></asp:TextBox>
+					        <asp:TextBox type="text" name="txbNCasa" runat="server" required="required" placeholder="Número" ID="txbNumero"></asp:TextBox>
 				        </div><br><br />
 				        <div class="bairro">Bairro:<br>
-					        <asp:TextBox type="text" name="txbBairro" runat="server"  placeholder="Digite o Bairro" ID="txbBairro"></asp:TextBox>
+					        <asp:TextBox type="text" name="txbBairro" runat="server" required="required" placeholder="Digite o Bairro" ID="txbBairro"></asp:TextBox>
 				        </div>&nbsp
 				        <div class="cidade">Cidade:<br>
-					        <asp:TextBox type="text" name="txbCidade" runat="server"  placeholder="Digite a Cidade" ID="txbCidade"></asp:TextBox>
+					        <asp:TextBox type="text" name="txbCidade" runat="server" required="required" placeholder="Digite a Cidade" ID="txbCidade"></asp:TextBox>
 				        </div>
 				        <!-- "placeholder" é a palavra que fica no input antes de preenche-lo" -->
 			        </div>
@@ -51,7 +54,6 @@
 			        <br>
             <div class="botoes">
                     <asp:Button class="btn btn-success" ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
-                    <asp:Button class="btn btn-warning" ID="btnEditar" runat="server" Text="Editar" OnClick="btnEditar_Click" />
                     <asp:Button class="btn btn-danger" ID="btnExcluir" runat="server" Text="Excluir" OnClick="btnExcluir_Click" />
                     <br>
             </div>    
@@ -59,17 +61,17 @@
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:CommandField ShowSelectButton="True" />
-                        <asp:BoundField DataField="CodCliente" HeaderText="Cod.Cliente" Visible="False"/>
+                        <asp:BoundField DataField="CodCliente" HeaderText="Cod.Cliente" Visible="true"/>
                         <asp:BoundField DataField="Nome"  HeaderText="Nome" Visible="true"/>
                         <asp:BoundField DataField="CPF" HeaderText="CPF" Visible="true"/>
-                        <asp:BoundField DataField="Telefone" HeaderText="Telefone" Visible="False"/>
-                        <asp:BoundField DataField="DataNascimento" HeaderText="Data de Nascimento" Visible="False" />
+                        <asp:BoundField DataField="Telefone" HeaderText="Telefone" Visible="true"/>
+                        <asp:BoundField DataField="DataNascimento" HeaderText="Data de Nascimento" Visible="true" />
                         <asp:BoundField DataField="Email" HeaderText="Email" Visible="true"/>
-                        <asp:BoundField DataField="Rua" HeaderText="Rua" Visible="False" />
-                        <asp:BoundField DataField="Numero" HeaderText="Numero" Visible="False" />
-                        <asp:BoundField DataField="Bairro" HeaderText="Bairro" Visible="False" />
-                        <asp:BoundField DataField="Cidade" HeaderText="Cidade" Visible="False" />
-                        <asp:BoundField DataField="Cep" HeaderText="Cep" Visible="False" />
+                        <asp:BoundField DataField="Rua" HeaderText="Rua" Visible="true" />
+                        <asp:BoundField DataField="Numero" HeaderText="Numero" Visible="true" />
+                        <asp:BoundField DataField="Bairro" HeaderText="Bairro" Visible="true" />
+                        <asp:BoundField DataField="Cidade" HeaderText="Cidade" Visible="true" />
+                        <asp:BoundField DataField="Cep" HeaderText="Cep" Visible="true" />
                 
                     </Columns>
                     <EditRowStyle BackColor="#7C6F57" />
