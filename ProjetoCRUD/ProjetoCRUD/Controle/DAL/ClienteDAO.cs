@@ -90,7 +90,7 @@ namespace Controle.DAL
                     cliente.CodCliente = Convert.ToInt32(dr["IdCliente"]);
                     cliente.Nome = Convert.ToString(dr["Nome"]);
                     cliente.Cpf = Convert.ToString(dr["CPF"]);
-                    cliente.DataNascimento = Convert.ToDateTime(dr["DataNascimento"]);
+                    cliente.DataNascimento = Convert.ToString(dr["DataNascimento"]);
                     cliente.Email = Convert.ToString(dr["Email"]);
                     cliente.Telefone = Convert.ToString(dr["Telefone"]);
                     cliente.Rua = Convert.ToString(dr["Rua"]);

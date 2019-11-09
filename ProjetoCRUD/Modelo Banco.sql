@@ -16,7 +16,7 @@ create table tb_Pessoas
 	IdCliente int Primary key identity,
 	Nome varchar (50),
 	CPF varchar (11),
-	DataNascimento Date,
+	DataNascimento varchar (10),
 	Email varchar (70),
 	Telefone varchar(11),
 	Fk_Enderecos_IdEndereco int,

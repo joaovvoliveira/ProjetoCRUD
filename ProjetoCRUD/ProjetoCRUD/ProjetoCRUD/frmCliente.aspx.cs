@@ -21,7 +21,7 @@ namespace ProjetoCRUD
                 
                 cliente.Nome = txbNome.Text;
                 cliente.Cpf = txbCPF.Text;
-                cliente.DataNascimento = Convert.ToDateTime(txbDataNascimento.Text + " 00:00:00");
+                cliente.DataNascimento = txbDataNascimento.Text;
                 cliente.Email = txbEmail.Text;
                 cliente.Telefone = txbTelefone.Text;
                 cliente.Rua = txbRua.Text;
@@ -87,7 +87,7 @@ namespace ProjetoCRUD
             txbNome.Text = gvConsultaClientes.SelectedRow.Cells[2].Text;
             txbCPF.Text = gvConsultaClientes.SelectedRow.Cells[3].Text;
             txbTelefone.Text = gvConsultaClientes.SelectedRow.Cells[4].Text;
-            txbDataNascimento.Text= gvConsultaClientes.SelectedRow.Cells[5].Text;
+            txbDataNascimento.Text = gvConsultaClientes.SelectedRow.Cells[5].Text;
             txbEmail.Text = gvConsultaClientes.SelectedRow.Cells[6].Text;
             txbRua.Text = gvConsultaClientes.SelectedRow.Cells[7].Text;
             txbNumero.Text = gvConsultaClientes.SelectedRow.Cells[8].Text;

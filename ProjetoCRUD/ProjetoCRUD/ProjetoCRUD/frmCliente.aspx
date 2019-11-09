@@ -19,7 +19,7 @@
 					        <asp:TextBox type="text" name="txbNome" runat="server" required="required" placeholder="Digite seu Nome" autofocus="" ID="txbNome" ></asp:TextBox>
 				        </div>&nbsp
 				        <div class="nasc">Data de Nascimento:<br>
-					        <asp:TextBox type="date" name="txbNasc" runat="server" required="required" placeholder="DD/MM/AAAA" ID="txbDataNascimento"></asp:TextBox>
+					        <asp:TextBox type="date" name="txbNasc"  runat="server" required="required" placeholder="DD/MM/YYYY" ID="txbDataNascimento"></asp:TextBox>
 				        </div><br />
                         <br>
 				        <div class="email">Email:<br>
@@ -65,7 +65,7 @@
                         <asp:BoundField DataField="Nome"  HeaderText="Nome" Visible="true"/>
                         <asp:BoundField DataField="CPF" HeaderText="CPF" Visible="true"/>
                         <asp:BoundField DataField="Telefone" HeaderText="Telefone" Visible="true"/>
-                        <asp:BoundField DataField="DataNascimento" HeaderText="Data de Nascimento" Visible="true" />
+                        <asp:BoundField DataField="DataNascimento" HeaderText="Data de Nascimento" Visible="true" DataFormatString="{0:dd-mm-yyyy}" />
                         <asp:BoundField DataField="Email" HeaderText="Email" Visible="true"/>
                         <asp:BoundField DataField="Rua" HeaderText="Rua" Visible="true" />
                         <asp:BoundField DataField="Numero" HeaderText="Numero" Visible="true" />
