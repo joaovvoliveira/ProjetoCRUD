@@ -14,50 +14,71 @@ namespace ProjetoCRUD
     {
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
-            ClienteDTO cliente = new ClienteDTO();
-
-            cliente.Nome = txbNome.Text;
-            cliente.Cpf = txbCPF.Text;
-            cliente.DataNascimento = Convert.ToDateTime(txbDataNascimento.Text + " 00:00:00");
-            cliente.Email = txbEmail.Text;
-            cliente.Telefone = txbTelefone.Text;
-            cliente.Rua = txbRua.Text;
-            cliente.Numero = txbNumero.Text;
-            cliente.Bairro = txbBairro.Text;
-            cliente.Cidade = txbCidade.Text;
-            cliente.Cep = txbCEP.Text;
-
-            if (txbId.Text.Equals(""))
+            try
             {
-                Controles.Controles.getInstance().CadastrarCliente(cliente);
-                Response.Write("<script>alert('cadastrado Com Sucesso');</script>");
+                ClienteDTO cliente = new ClienteDTO();
+
+                
+                cliente.Nome = txbNome.Text;
+                cliente.Cpf = txbCPF.Text;
+                cliente.DataNascimento = Convert.ToDateTime(txbDataNascimento.Text + " 00:00:00");
+                cliente.Email = txbEmail.Text;
+                cliente.Telefone = txbTelefone.Text;
+                cliente.Rua = txbRua.Text;
+                cliente.Numero = txbNumero.Text;
+                cliente.Bairro = txbBairro.Text;
+                cliente.Cidade = txbCidade.Text;
+                cliente.Cep = txbCEP.Text;
+
+                if (txbId.Text.Equals(""))
+                {
+                    Controles.Controles.getInstance().CadastrarCliente(cliente);
+                    Response.Write("<script>alert('cadastrado Com Sucesso');</script>");
+                }
+                else
+                {
+                    cliente.CodCliente = Convert.ToInt32(txbId.Text);
+                    Controles.Controles.getInstance().EditarCliente(cliente);
+                    Response.Write("<script>alert('Alterado com sucesso');</script>");
+                }
+                limparTextBoxes(this);
+                Page_Load();
             }
-            else
+            catch (Exception ex)
             {
-                cliente.CodCliente = Convert.ToInt32(txbId.Text);
-                Controles.Controles.getInstance().EditarCliente(cliente);
-                Response.Write("<script>alert('Alterado com sucesso');</script>");
+                Response.Write(ex.Message);
             }
-            limparTextBoxes(this);
-            Page_Load();   
         }
         protected void Page_Load()
         {
             gvConsultaClientes.DataSource = Controles.Controles.getInstance().ConsultaCliente();
-            gvConsultaClientes.DataBind();
-            
-        }
-
-        protected void btnEditar_Click(object sender, EventArgs e)
-        {
-            
-            
-
+            gvConsultaClientes.DataBind();   
         }
 
         protected void btnExcluir_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (txbId.Text.Equals(""))
+                {
+                    Response.Write("<script>alert('Id não pode está em branco');</script>");
+                }
+                else
+                {
+                    ClienteDTO cliente = new ClienteDTO();
 
+                    cliente.CodCliente = Convert.ToInt32(txbId.Text);
+
+                    Controles.Controles.getInstance().ExcluirCliente(cliente);
+
+                    Response.Write("<script>alert('Cliente Deletado com Sucesso');</script>");
+                }
+            }
+            catch (Exception ex)
+            {
+
+               Response.Write(ex.Message);
+            }
         }
 
         protected void gvConsultaClientes_SelectedIndexChanged(object sender, EventArgs  e)
@@ -66,14 +87,14 @@ namespace ProjetoCRUD
             txbNome.Text = gvConsultaClientes.SelectedRow.Cells[2].Text;
             txbCPF.Text = gvConsultaClientes.SelectedRow.Cells[3].Text;
             txbTelefone.Text = gvConsultaClientes.SelectedRow.Cells[4].Text;
-            txbDataNascimento.Text = gvConsultaClientes.SelectedRow.Cells[5].Text;
+            txbDataNascimento.Text= gvConsultaClientes.SelectedRow.Cells[5].Text;
             txbEmail.Text = gvConsultaClientes.SelectedRow.Cells[6].Text;
             txbRua.Text = gvConsultaClientes.SelectedRow.Cells[7].Text;
             txbNumero.Text = gvConsultaClientes.SelectedRow.Cells[8].Text;
             txbBairro.Text = gvConsultaClientes.SelectedRow.Cells[9].Text;
             txbCidade.Text = gvConsultaClientes.SelectedRow.Cells[10].Text;
             txbCEP.Text = gvConsultaClientes.SelectedRow.Cells[11].Text;
-            //txbEstado.Text = gvConsultaClientes.SelectedRow.Cells[11].ToString();
+            
         }
 
         private void limparTextBoxes(Control control)

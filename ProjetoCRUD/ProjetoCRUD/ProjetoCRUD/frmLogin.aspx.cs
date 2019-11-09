@@ -19,20 +19,28 @@ namespace ProjetoCRUD
 
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
-            ClienteDTO cliente = new ClienteDTO();
-
-            cliente.Usuario = txbUsuario.Text;
-            cliente.Senha = txbSenha.Text;
-
-            if (Controle.BL.ClienteBL.getInstance().ValidarLogin(cliente))
+            try
             {
+                ClienteDTO cliente = new ClienteDTO();
 
-                Response.Redirect("frmInicial.aspx");
+                cliente.Usuario = txbUsuario.Text;
+                cliente.Senha = txbSenha.Text;
+
+                if (Controle.BL.ClienteBL.getInstance().ValidarLogin(cliente))
+                {
+
+                    Response.Redirect("frmInicial.aspx");
+                }
+                else
+                {
+                    Response.Write("<script>alert('Usuario ou Senha Incorretos');</script>");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                Response.Write("<script>alert('Usuario ou Senha Incorretos');</script>");
+                Response.Write(ex.Message);
             }
+
         }
     }
 }

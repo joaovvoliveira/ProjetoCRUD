@@ -31,15 +31,7 @@ namespace Controle.BL
 
         public void CadastrarCliente(ClienteDTO cliente)
         {
-            try
-            {
-                DAL.ClienteDAO.getInstance().CadastrarCliente(cliente);
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
+           DAL.ClienteDAO.getInstance().CadastrarCliente(cliente);       
         }
 
         public List<ClienteDTO> ConsultaCliente()
@@ -54,7 +46,7 @@ namespace Controle.BL
 
         public void ExcluirCliente(ClienteDTO cliente)
         {
-
+            DAL.ClienteDAO.getInstance().ExcluirCliente(cliente);
         }
 
         public Boolean ValidarLogin(ClienteDTO cliente)
