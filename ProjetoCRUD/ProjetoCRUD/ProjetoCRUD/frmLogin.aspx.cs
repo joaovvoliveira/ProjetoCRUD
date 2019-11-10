@@ -23,8 +23,8 @@ namespace ProjetoCRUD
             {
                 ClienteDTO cliente = new ClienteDTO();
 
-                cliente.Usuario = txbUsuario.Text;
-                cliente.Senha = txbSenha.Text;
+                cliente.Cl_usuario = txbUsuario.Text;
+                cliente.Cl_senha = txbSenha.Text;
 
                 if (Controle.BL.ClienteBL.getInstance().ValidarLogin(cliente))
                 {

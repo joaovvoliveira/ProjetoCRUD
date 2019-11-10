@@ -40,16 +40,16 @@ namespace Controle.DAL
                                             values(@Nome, @CPF, @DataNascimento, @Email, @Telefone, @Id_Endereco, 1)", conn);
 
            // cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Nome", cliente.Nome);
-            cmd.Parameters.AddWithValue("@CPF", cliente.Cpf);
-            cmd.Parameters.AddWithValue("@DataNascimento", cliente.DataNascimento);
-            cmd.Parameters.AddWithValue("@Email", cliente.Email);
-            cmd.Parameters.AddWithValue("@Telefone", cliente.Telefone);
-            cmd.Parameters.AddWithValue("@Rua", cliente.Rua);
-            cmd.Parameters.AddWithValue("@Numero", cliente.Numero);
-            cmd.Parameters.AddWithValue("@Bairro", cliente.Bairro);
-            cmd.Parameters.AddWithValue("@Cidade", cliente.Cidade);
-            cmd.Parameters.AddWithValue("@Cep", cliente.Cep);
+            cmd.Parameters.AddWithValue("@Nome", cliente.Cl_nome);
+            cmd.Parameters.AddWithValue("@CPF", cliente.Cl_cpf);
+            cmd.Parameters.AddWithValue("@Sobrenome", cliente.Cl_sobrenome);
+            cmd.Parameters.AddWithValue("@Email", cliente.Cl_email);
+            cmd.Parameters.AddWithValue("@Telefone", cliente.Cl_telefone);
+            cmd.Parameters.AddWithValue("@Rua", cliente.Cl_rua);
+            cmd.Parameters.AddWithValue("@Numero", cliente.Cl_numero);
+            cmd.Parameters.AddWithValue("@Bairro", cliente.Cl_bairro);
+            cmd.Parameters.AddWithValue("@Cidade", cliente.Cl_cidade);
+            cmd.Parameters.AddWithValue("@Cep", cliente.Cl_cep);
             cmd.Parameters.AddWithValue("@IdCliente", Convert.ToInt32(cliente.CodCliente));
 
             try
@@ -88,16 +88,16 @@ namespace Controle.DAL
                     ClienteDTO cliente = new ClienteDTO();
 
                     cliente.CodCliente = Convert.ToInt32(dr["IdCliente"]);
-                    cliente.Nome = Convert.ToString(dr["Nome"]);
-                    cliente.Cpf = Convert.ToString(dr["CPF"]);
-                    cliente.DataNascimento = Convert.ToString(dr["DataNascimento"]);
-                    cliente.Email = Convert.ToString(dr["Email"]);
-                    cliente.Telefone = Convert.ToString(dr["Telefone"]);
-                    cliente.Rua = Convert.ToString(dr["Rua"]);
-                    cliente.Numero = Convert.ToString(dr["Numero"]);
-                    cliente.Bairro = Convert.ToString(dr["Bairro"]);
-                    cliente.Cidade = Convert.ToString(dr["Cidade"]);
-                    cliente.Cep = Convert.ToString(dr["Cep"]);
+                    cliente.Cl_nome = Convert.ToString(dr["Nome"]);
+                    cliente.Cl_cpf = Convert.ToString(dr["CPF"]);
+                    cliente.Cl_sobrenome = Convert.ToString(dr["Sobrenome"]);
+                    cliente.Cl_email = Convert.ToString(dr["Email"]);
+                    cliente.Cl_telefone = Convert.ToString(dr["Telefone"]);
+                    cliente.Cl_rua = Convert.ToString(dr["Rua"]);
+                    cliente.Cl_numero = Convert.ToString(dr["Numero"]);
+                    cliente.Cl_bairro = Convert.ToString(dr["Bairro"]);
+                    cliente.Cl_cidade = Convert.ToString(dr["Cidade"]);
+                    cliente.Cl_cep = Convert.ToString(dr["Cep"]);
 
                     ListaClientes.Add(cliente);
                 }
@@ -117,7 +117,7 @@ namespace Controle.DAL
       {
             SqlCommand cmd = new SqlCommand(@"declare @FkEndereco int
                                             update tb_Pessoas
-                                            Set Nome = @Nome, CPF = @CPF, DataNascimento = @DataNascimento, Email = @Email, Telefone = @Telefone, @FkEndereco = (select Fk_Enderecos_IdEndereco from tb_Pessoas where IdCliente = @IdCliente)
+                                            Set Nome = @Nome, CPF = @CPF, Sobrenome = @Sobrenome, Email = @Email, Telefone = @Telefone, @FkEndereco = (select Fk_Enderecos_IdEndereco from tb_Pessoas where IdCliente = @IdCliente)
                                             where IdCliente = @IdCliente
 
                                             update tb_Enderecos
@@ -125,16 +125,16 @@ namespace Controle.DAL
                                             where IdEndereco = @FkEndereco", conn);
 
             // cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Nome", cliente.Nome);
-            cmd.Parameters.AddWithValue("@CPF", cliente.Cpf);
-            cmd.Parameters.AddWithValue("@DataNascimento", cliente.DataNascimento);
-            cmd.Parameters.AddWithValue("@Email", cliente.Email);
-            cmd.Parameters.AddWithValue("@Telefone", cliente.Telefone);
-            cmd.Parameters.AddWithValue("@Rua", cliente.Rua);
-            cmd.Parameters.AddWithValue("@Numero", cliente.Numero);
-            cmd.Parameters.AddWithValue("@Bairro", cliente.Bairro);
-            cmd.Parameters.AddWithValue("@Cidade", cliente.Cidade);
-            cmd.Parameters.AddWithValue("@Cep", cliente.Cep);
+            cmd.Parameters.AddWithValue("@Nome", cliente.Cl_nome);
+            cmd.Parameters.AddWithValue("@CPF", cliente.Cl_cpf);
+            cmd.Parameters.AddWithValue("@Sobrenome", cliente.Cl_sobrenome);
+            cmd.Parameters.AddWithValue("@Email", cliente.Cl_email);
+            cmd.Parameters.AddWithValue("@Telefone", cliente.Cl_telefone);
+            cmd.Parameters.AddWithValue("@Rua", cliente.Cl_rua);
+            cmd.Parameters.AddWithValue("@Numero", cliente.Cl_numero);
+            cmd.Parameters.AddWithValue("@Bairro", cliente.Cl_bairro);
+            cmd.Parameters.AddWithValue("@Cidade", cliente.Cl_cidade);
+            cmd.Parameters.AddWithValue("@Cep", cliente.Cl_cep);
             cmd.Parameters.AddWithValue("@IdCliente", Convert.ToInt32(cliente.CodCliente));
 
             try
@@ -175,7 +175,7 @@ namespace Controle.DAL
 
       public Boolean ValidarLogin(ClienteDTO cliente)
       {
-            String sqlText = String.Format("Select * from tb_LoginUsuarios Where Usuario = '{0}' and Senha = '{1}'", cliente.Usuario, cliente.Senha);
+            String sqlText = String.Format("Select * from tb_LoginUsuarios Where Usuario = '{0}' and Senha = '{1}'", cliente.Cl_usuario, cliente.Cl_senha);
 
             SqlCommand cmd = new SqlCommand(sqlText, conn);
 

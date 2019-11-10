@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="AreaDeTrabalho" runat="server">
-<!DOCTYPE html>
+    <!DOCTYPE html>
     <html>
         <head>
             <meta charset="utf-8" />
@@ -15,11 +15,11 @@
 				        <h3 id="inserirDados">Insira os Dados abaixo:</h3><span>&nbsp ID: 
                         <asp:TextBox ID="txbId" runat="server" Width="44px"></asp:TextBox><br />
                         </span><br />
-                        <div class="nome"> Nome:<br>
+                        <div class="nome">Nome:<br>
 					        <asp:TextBox type="text" name="txbNome" runat="server" required="required" placeholder="Digite seu Nome" autofocus="" ID="txbNome" ></asp:TextBox>
 				        </div>&nbsp
-				        <div class="nasc">Data de Nascimento:<br>
-					        <asp:TextBox type="date" name="txbNasc"  runat="server" required="required" placeholder="DD/MM/YYYY" ID="txbDataNascimento"></asp:TextBox>
+				        <div class="nasc">Sobrenome:<br>
+					        <asp:TextBox type="text" name="txbSobrenome"  runat="server" required="required" ID="txbSobrenome"></asp:TextBox>
 				        </div><br />
                         <br>
 				        <div class="email">Email:<br>
@@ -57,7 +57,7 @@
                     <asp:Button class="btn btn-danger" ID="btnExcluir" runat="server" Text="Excluir" OnClick="btnExcluir_Click" />
                     <br>
             </div>    
-                <asp:GridView ID="gvConsultaClientes" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" OnSelectedIndexChanged="gvConsultaClientes_SelectedIndexChanged">
+                <asp:GridView ID="gvConsultaClientes" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" OnSelectedIndexChanged="gvConsultaClientes_SelectedIndexChanged" GridLines="None">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:CommandField ShowSelectButton="True" />

@@ -19,16 +19,16 @@ namespace ProjetoCRUD
                 ClienteDTO cliente = new ClienteDTO();
 
                 
-                cliente.Nome = txbNome.Text;
-                cliente.Cpf = txbCPF.Text;
-                cliente.DataNascimento = txbDataNascimento.Text;
-                cliente.Email = txbEmail.Text;
-                cliente.Telefone = txbTelefone.Text;
-                cliente.Rua = txbRua.Text;
-                cliente.Numero = txbNumero.Text;
-                cliente.Bairro = txbBairro.Text;
-                cliente.Cidade = txbCidade.Text;
-                cliente.Cep = txbCEP.Text;
+                cliente.Cl_nome = txbNome.Text;
+                cliente.Cl_cpf = txbCPF.Text;
+                cliente.Cl_sobrenome = txbSobrenome.Text;
+                cliente.Cl_email = txbEmail.Text;
+                cliente.Cl_telefone = txbTelefone.Text;
+                cliente.Cl_rua = txbRua.Text;
+                cliente.Cl_numero = txbNumero.Text;
+                cliente.Cl_bairro = txbBairro.Text;
+                cliente.Cl_cidade = txbCidade.Text;
+                cliente.Cl_cep = txbCEP.Text;
 
                 if (txbId.Text.Equals(""))
                 {
@@ -87,7 +87,7 @@ namespace ProjetoCRUD
             txbNome.Text = gvConsultaClientes.SelectedRow.Cells[2].Text;
             txbCPF.Text = gvConsultaClientes.SelectedRow.Cells[3].Text;
             txbTelefone.Text = gvConsultaClientes.SelectedRow.Cells[4].Text;
-            txbDataNascimento.Text = gvConsultaClientes.SelectedRow.Cells[5].Text;
+            txbSobrenome.Text = gvConsultaClientes.SelectedRow.Cells[5].Text;
             txbEmail.Text = gvConsultaClientes.SelectedRow.Cells[6].Text;
             txbRua.Text = gvConsultaClientes.SelectedRow.Cells[7].Text;
             txbNumero.Text = gvConsultaClientes.SelectedRow.Cells[8].Text;

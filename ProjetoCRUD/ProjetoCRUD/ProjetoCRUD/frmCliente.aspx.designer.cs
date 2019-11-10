@@ -31,13 +31,13 @@ namespace ProjetoCRUD {
         protected global::System.Web.UI.WebControls.TextBox txbNome;
         
         /// <summary>
-        /// Controle txbDataNascimento.
+        /// Controle txbSobrenome.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbDataNascimento;
+        protected global::System.Web.UI.WebControls.TextBox txbSobrenome;
         
         /// <summary>
         /// Controle txbEmail.

@@ -31,7 +31,7 @@
         <div id="corpo"><br />
             <br />
             <asp:Button ID="btnCliente" class="btn btn-primary btn-lg active" runat="server" Text="Cliente" OnClick="btnCliente_Click" />            
-            <asp:Button ID="btnLogoff" class="btn btn-secondary btn-lg active" runat="server" Text="Logoff" OnClick="btnLogoff_Click" />
+            <asp:Button ID="btnLogoff" class="btn btn-secondary btn-lg active" runat="server" Text="Logout" OnClick="btnLogoff_Click" />
             <div>
                 <asp:ContentPlaceHolder ID="AreaDeTrabalho" runat="server">
                 </asp:ContentPlaceHolder>
