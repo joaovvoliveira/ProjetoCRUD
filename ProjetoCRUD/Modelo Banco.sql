@@ -67,3 +67,8 @@ values ('Limpa', 'Limpa', 'Oliveira', 'Limpa', 'Limpa', 4)
 update tb_Pessoas
 set Ativo = 0
 where IdCliente = 1
+
+select * from tb_Pessoas
+inner join tb_Enderecos
+on tb_Pessoas.Fk_Enderecos_IdEndereco = tb_Enderecos.IdEndereco
+where Ativo = 1

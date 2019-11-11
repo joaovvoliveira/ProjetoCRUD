@@ -72,6 +72,8 @@ namespace ProjetoCRUD
                     Controles.Controles.getInstance().ExcluirCliente(cliente);
 
                     Response.Write("<script>alert('Cliente Deletado com Sucesso');</script>");
+
+                    Page_Load();
                 }
             }
             catch (Exception ex)
@@ -85,9 +87,9 @@ namespace ProjetoCRUD
         {
             txbId.Text = gvConsultaClientes.SelectedRow.Cells[1].Text;
             txbNome.Text = gvConsultaClientes.SelectedRow.Cells[2].Text;
-            txbCPF.Text = gvConsultaClientes.SelectedRow.Cells[3].Text;
+            txbSobrenome.Text = gvConsultaClientes.SelectedRow.Cells[3].Text;        
             txbTelefone.Text = gvConsultaClientes.SelectedRow.Cells[4].Text;
-            txbSobrenome.Text = gvConsultaClientes.SelectedRow.Cells[5].Text;
+            txbCPF.Text = gvConsultaClientes.SelectedRow.Cells[5].Text;
             txbEmail.Text = gvConsultaClientes.SelectedRow.Cells[6].Text;
             txbRua.Text = gvConsultaClientes.SelectedRow.Cells[7].Text;
             txbNumero.Text = gvConsultaClientes.SelectedRow.Cells[8].Text;

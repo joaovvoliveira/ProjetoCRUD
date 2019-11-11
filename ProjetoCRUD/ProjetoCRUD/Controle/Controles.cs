@@ -56,7 +56,7 @@ namespace Controles
 
         public void ExcluirCliente (ClienteDTO cliente)
         {
-
+            ClienteBL.getInstance().ExcluirCliente(cliente);
         }
 
         public Boolean ValidarLogin (ClienteDTO cliente)

@@ -62,16 +62,16 @@
                     <Columns>
                         <asp:CommandField ShowSelectButton="True" />
                         <asp:BoundField DataField="CodCliente" HeaderText="Cod.Cliente" Visible="true"/>
-                        <asp:BoundField DataField="Nome"  HeaderText="Nome" Visible="true"/>
-                        <asp:BoundField DataField="CPF" HeaderText="CPF" Visible="true"/>
-                        <asp:BoundField DataField="Telefone" HeaderText="Telefone" Visible="true"/>
-                        <asp:BoundField DataField="DataNascimento" HeaderText="Data de Nascimento" Visible="true" DataFormatString="{0:dd-mm-yyyy}" />
-                        <asp:BoundField DataField="Email" HeaderText="Email" Visible="true"/>
-                        <asp:BoundField DataField="Rua" HeaderText="Rua" Visible="true" />
-                        <asp:BoundField DataField="Numero" HeaderText="Numero" Visible="true" />
-                        <asp:BoundField DataField="Bairro" HeaderText="Bairro" Visible="true" />
-                        <asp:BoundField DataField="Cidade" HeaderText="Cidade" Visible="true" />
-                        <asp:BoundField DataField="Cep" HeaderText="Cep" Visible="true" />
+                        <asp:BoundField DataField="Cl_nome"  HeaderText="Nome" Visible="true"/>
+                        <asp:BoundField DataField="Cl_sobrenome" HeaderText="Sobrenome" Visible="true" />
+                        <asp:BoundField DataField="Cl_cpf" HeaderText="CPF" Visible="true"/>
+                        <asp:BoundField DataField="Cl_telefone" HeaderText="Telefone" Visible="true"/>
+                        <asp:BoundField DataField="Cl_email" HeaderText="Email" Visible="true"/>
+                        <asp:BoundField DataField="Cl_rua" HeaderText="Rua" Visible="true" />
+                        <asp:BoundField DataField="Cl_numero" HeaderText="Numero" Visible="true" />
+                        <asp:BoundField DataField="Cl_bairro" HeaderText="Bairro" Visible="true" />
+                        <asp:BoundField DataField="Cl_cidade" HeaderText="Cidade" Visible="true" />
+                        <asp:BoundField DataField="Cl_cep" HeaderText="Cep" Visible="true" />
                 
                     </Columns>
                     <EditRowStyle BackColor="#7C6F57" />

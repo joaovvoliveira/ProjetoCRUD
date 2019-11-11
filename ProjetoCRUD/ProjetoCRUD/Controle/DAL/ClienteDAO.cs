@@ -36,8 +36,8 @@ namespace Controle.DAL
                                             values(@Rua, @Numero, @Bairro, @Cidade, @Cep)
                                             declare @Id_Endereco int =@@identity
 
-                                            insert into tb_Pessoas (Nome, CPF, DataNascimento, Email, Telefone, Fk_Enderecos_IdEndereco, Ativo)
-                                            values(@Nome, @CPF, @DataNascimento, @Email, @Telefone, @Id_Endereco, 1)", conn);
+                                            insert into tb_Pessoas (Nome, CPF, Sobrenome, Email, Telefone, Fk_Enderecos_IdEndereco, Ativo)
+                                            values(@Nome, @CPF, @Sobrenome, @Email, @Telefone, @Id_Endereco, 1)", conn);
 
            // cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Nome", cliente.Cl_nome);
