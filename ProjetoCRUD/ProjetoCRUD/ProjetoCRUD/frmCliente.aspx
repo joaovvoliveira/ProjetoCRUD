@@ -4,9 +4,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="AreaDeTrabalho" runat="server">
     <!DOCTYPE html>
     <html>
-        <head>
-            <meta charset="utf-8" />
-        </head>
         <body>
             <!-- Criando o formulário -->
             <fieldset>
