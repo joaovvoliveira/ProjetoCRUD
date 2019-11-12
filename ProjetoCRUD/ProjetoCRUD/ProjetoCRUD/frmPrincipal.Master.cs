@@ -21,7 +21,7 @@ namespace ProjetoCRUD
 
         protected void btnLogoff_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Login.aspx");
+            Response.Redirect("frmLogin.aspx");
         }
     }
 }

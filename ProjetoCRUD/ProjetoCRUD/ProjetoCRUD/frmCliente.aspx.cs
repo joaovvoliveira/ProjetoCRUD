@@ -52,7 +52,7 @@ namespace ProjetoCRUD
         protected void Page_Load()
         {
             gvConsultaClientes.DataSource = Controles.Controles.getInstance().ConsultaCliente();
-            gvConsultaClientes.DataBind();   
+            gvConsultaClientes.DataBind();
         }
 
         protected void btnExcluir_Click(object sender, EventArgs e)
@@ -114,6 +114,20 @@ namespace ProjetoCRUD
                     limparTextBoxes(ctrl);
                 }
             }
+        }
+
+        protected void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txbNome.Text = string.Empty;
+            txbSobrenome.Text = string.Empty;
+            txbCPF.Text = string.Empty;
+            txbEmail.Text = string.Empty;
+            txbTelefone.Text = string.Empty;
+            txbRua.Text = string.Empty;
+            txbNumero.Text = string.Empty;
+            txbCidade.Text = string.Empty;
+            txbCEP.Text = string.Empty;
+            txbBairro.Text = string.Empty;
         }
     }
 }

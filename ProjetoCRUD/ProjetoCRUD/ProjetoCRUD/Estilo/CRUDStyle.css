@@ -1,6 +1,6 @@
 ﻿body {
     font-family: 'Merriweather', serif;
-    width: 50%;
+    width: 1500px;
     background-color: #48D1CC;
 }
 #btnCliente{
@@ -20,7 +20,9 @@
     margin-bottom: 20px;
 }
 .gvConsultaClientes {
-    float: right;
+    margin-left: 30px;
+    margin-bottom:30px;
+    margin-top: 12px;
 }
 #Titulo{
     margin: 0 auto;
@@ -47,13 +49,9 @@
 .bairro, .cidade {
     display: inline-block;
 }
-
-.botoes {
-    padding-bottom: 20px;
-}
-#btnSalvar, #btnEditar, #btnExcluir{
+#btnSalvar, #btnLimpar #btnExcluir{
     width: 20%;
-    margin-left: 30px;
+    margin-left: 40px;
     
 }
 #txbDataNascimento {
